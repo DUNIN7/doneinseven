@@ -1,0 +1,250 @@
+<!--
+  DUNIN7 apex landing page — mockup v0.1
+  doneinseven.com
+  2026-05-16
+
+  First-pass starting-point draft. Per Phase 51 P51-D6, marketing content is
+  Operator-authored; this draft is a reaction surface, not final copy.
+
+  Open design question carried in this draft:
+  - FORAY and OVA subdomains shown as label-only (not linked) because the
+    pages don't exist yet. Alternative: deploy placeholder pages at those
+    subdomains and make them live links. v0.1 takes the honest-about-state
+    path; v0.2 can flip if desired.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DUNIN7 — apex landing mockup v0.1</title>
+  <meta name="description" content="DUNIN7 builds substrate for the agentic era. Memory, transactions, identity — for AI agents and the humans working with them.">
+  <style>
+    :root {
+      --bg: #FAF9F7;
+      --bg-card: #FFFFFF;
+      --bg-card-inactive: #F4F2EE;
+      --text-primary: #1A1A1A;
+      --text-secondary: #4A4A4A;
+      --text-muted: #7A7A7A;
+      --text-faint: #A8A4A0;
+      --border: #DCD8D2;
+      --border-card-inactive: #E5E1DB;
+      --accent: #2A3F5F;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+      background: var(--bg);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 96px 32px 64px;
+    }
+
+    .wordmark {
+      font-family: "IBM Plex Serif", "Source Serif Pro", Georgia, serif;
+      font-size: 44px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .tagline {
+      font-size: 22px;
+      color: var(--text-secondary);
+      margin: 12px 0 0;
+      letter-spacing: -0.01em;
+      font-weight: 400;
+    }
+
+    .thesis {
+      margin: 72px 0 64px;
+      max-width: 620px;
+    }
+    .thesis p {
+      margin: 0 0 16px;
+      color: var(--text-primary);
+    }
+    .thesis p:last-child {
+      margin-bottom: 0;
+      color: var(--text-secondary);
+    }
+
+    .products {
+      margin-top: 72px;
+    }
+    .products-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin: 0 0 24px;
+    }
+
+    .product {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    a.product:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .product.inactive {
+      background: var(--bg-card-inactive);
+      border-color: var(--border-card-inactive);
+    }
+
+    .product-name {
+      font-family: "IBM Plex Serif", "Source Serif Pro", Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0 0 4px;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .product-name .status {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      background: transparent;
+      padding: 2px 8px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+    }
+    .product.inactive .product-name .status {
+      background: transparent;
+      border-color: var(--border-card-inactive);
+      color: var(--text-faint);
+    }
+
+    .product-tagline {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin: 0 0 8px;
+      line-height: 1.5;
+    }
+    .product-note {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin: 0 0 16px;
+    }
+
+    .product-link {
+      font-size: 14px;
+      color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+    .product-link .arrow {
+      display: inline-block;
+      margin-left: 4px;
+      transition: transform 0.15s ease;
+    }
+    a.product:hover .product-link .arrow {
+      transform: translateX(3px);
+    }
+
+    .product-link.inactive-link {
+      color: var(--text-faint);
+      font-style: italic;
+    }
+
+    footer {
+      margin-top: 96px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    footer p { margin: 0; }
+
+    @media (max-width: 640px) {
+      .page { padding: 56px 20px 48px; }
+      .wordmark { font-size: 36px; }
+      .tagline { font-size: 19px; }
+      .thesis { margin: 48px 0; }
+      .products { margin-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <h1 class="wordmark">DUNIN7</h1>
+    <p class="tagline">Substrate for the agentic era.</p>
+
+    <section class="thesis">
+      <p>AI agents become useful when they have memory of what they've done, audit trails for the actions they take, and identity that authorizes what they can access.</p>
+      <p>DUNIN7 builds those three substrate layers.</p>
+    </section>
+
+    <section class="products">
+      <p class="products-label">Products</p>
+
+      <a class="product" href="https://loomworks.doneinseven.com">
+        <h2 class="product-name">
+          Loomworks
+          <span class="status">Alpha</span>
+        </h2>
+        <p class="product-tagline">Engagement memory for the agentic era.</p>
+        <p class="product-note">Considered, persistent, yours.</p>
+        <span class="product-link">loomworks.doneinseven.com <span class="arrow">→</span></span>
+      </a>
+
+      <div class="product inactive">
+        <h2 class="product-name">
+          FORAY
+          <span class="status">Patent pending</span>
+        </h2>
+        <p class="product-tagline">Universal transaction grammar for audit trails.</p>
+        <p class="product-note">Live on Kaspa. BSL-1.1.</p>
+        <span class="product-link inactive-link">foray.doneinseven.com — coming soon</span>
+      </div>
+
+      <div class="product inactive">
+        <h2 class="product-name">
+          OVA
+          <span class="status">Patent filed</span>
+        </h2>
+        <p class="product-tagline">Identity and authorization for AI agents.</p>
+        <p class="product-note">Capability-based access control. Macaroon-flavored.</p>
+        <span class="product-link inactive-link">ova.doneinseven.com — coming soon</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>DUNIN7 — Done In Seven LLC</p>
+      <p>Miami, Florida</p>
+    </footer>
+
+  </div>
+</body>
+</html>
