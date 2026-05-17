@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- doneinseven.com favicon v0.1
+       The "7" character set in IBM Plex Serif 600 — same face as the DUNIN7 wordmark.
+       Black variant of the shared "7" mark — paired with dunin7.com's cobalt variant
+       so the two surfaces are distinguishable at favicon scale.
+       
+       Warm white ground (#FAF9F7) matches both deployed pages.
+       Neutral near-black (#1A1A1A) matches the deployed wordmark color.
+       
+       Same SVG content as dunin7-favicon-v0_3.svg — the two are visually identical
+       at this version. Color differentiation arrives at dunin7-favicon-v0_4.svg
+       which uses cobalt for the "7" instead. -->
+  <rect width="32" height="32" rx="5" fill="#FAF9F7"/>
+  <text x="16" y="25" 
+        text-anchor="middle"
+        font-family="'IBM Plex Serif', 'Source Serif Pro', Georgia, 'Times New Roman', serif"
+        font-size="26"
+        font-weight="600"
+        fill="#1A1A1A">7</text>
+</svg>
