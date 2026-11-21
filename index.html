@@ -1,24 +1,20 @@
 <!--
-  DUNIN7 apex landing page — mockup v0.1
+  DUNIN7 apex landing page — v0.3
   doneinseven.com
-  2026-05-16
+  2026-11-21
 
-  First-pass starting-point draft. Per Phase 51 P51-D6, marketing content is
-  Operator-authored; this draft is a reaction surface, not final copy.
-
-  Open design question carried in this draft:
-  - FORAY and OVA subdomains shown as label-only (not linked) because the
-    pages don't exist yet. Alternative: deploy placeholder pages at those
-    subdomains and make them live links. v0.1 takes the honest-about-state
-    path; v0.2 can flip if desired.
+  v0.3 shows FORAY only. Replaces mockup v0.1 (2026-05-16), which listed
+  Loomworks, FORAY and OVA with FORAY and OVA as label-only "coming soon".
+  Loomworks and OVA are removed for now at the Operator's direction; the
+  Loomworks marketing site stays live at loomworks.doneinseven.com.
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DUNIN7 — apex landing mockup v0.1</title>
-  <meta name="description" content="DUNIN7 builds substrate for the agentic era. Memory, transactions, identity — for AI agents and the humans working with them.">
+  <title>DUNIN7 — landing v0.3</title>
+  <meta name="description" content="DUNIN7 builds substrate for the agentic era. FORAY: tamper-evident audit trails for AI agents.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <style>
     :root {
@@ -203,42 +199,22 @@
     <p class="tagline">Substrate for the agentic era.</p>
 
     <section class="thesis">
-      <p>AI agents become useful when they have memory of what they've done, audit trails for the actions they take, and identity that authorizes what they can access.</p>
-      <p>DUNIN7 builds those three substrate layers.</p>
+      <p>When AI agents act on your behalf, you need a record of what happened that no one can quietly change.</p>
+      <p>DUNIN7 builds that layer.</p>
     </section>
 
     <section class="products">
-      <p class="products-label">Products</p>
+      <p class="products-label">Product</p>
 
-      <a class="product" href="https://loomworks.doneinseven.com">
-        <h2 class="product-name">
-          Loomworks
-          <span class="status">Alpha</span>
-        </h2>
-        <p class="product-tagline">Engagement memory for the agentic era.</p>
-        <p class="product-note">Considered, persistent, yours.</p>
-        <span class="product-link">loomworks.doneinseven.com <span class="arrow">→</span></span>
-      </a>
-
-      <div class="product inactive">
+      <a class="product" href="https://foray.dunin7.com">
         <h2 class="product-name">
           FORAY
           <span class="status">Patent pending</span>
         </h2>
         <p class="product-tagline">Universal transaction grammar for audit trails.</p>
-        <p class="product-note">Live on Kaspa. BSL-1.1.</p>
-        <span class="product-link inactive-link">foray.doneinseven.com — coming soon</span>
-      </div>
-
-      <div class="product inactive">
-        <h2 class="product-name">
-          OVA
-          <span class="status">Patent filed</span>
-        </h2>
-        <p class="product-tagline">Identity and authorization for AI agents.</p>
-        <p class="product-note">Capability-based access control. Macaroon-flavored.</p>
-        <span class="product-link inactive-link">ova.doneinseven.com — coming soon</span>
-      </div>
+        <p class="product-note">Anchored on Kaspa. BSL-1.1.</p>
+        <span class="product-link">foray.dunin7.com <span class="arrow">→</span></span>
+      </a>
     </section>
 
     <footer>
